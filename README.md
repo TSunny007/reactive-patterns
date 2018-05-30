@@ -1,2 +1,2 @@
 # reactive-patterns
-Understanding how to use Yarn, RxJs and the Observable Pattern.
+Understanding how to use  RxJs and the Observable Pattern.
