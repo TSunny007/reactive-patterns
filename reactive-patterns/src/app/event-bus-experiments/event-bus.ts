@@ -1,3 +1,5 @@
+import * as lodash from 'lodash';
+
 export interface Observer {
     notify(data: any);
 }
@@ -16,9 +18,11 @@ class EventBus implements Subject {
         this.observers.push(obs);
     }
     unregisterObserver(obs: Observer) {
-        throw new Error("Method not implemented.");
+        lodash.remove(this.observers, el => el === obs);
     }
     notifyObservers(data: any) {
-        throw new Error("Method not implemented.");
+        this.observers.forEach(obs => obs.notify(data));
     }
 }
+
+export const globalEventBus = new EventBus();

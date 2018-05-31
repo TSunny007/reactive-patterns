@@ -1,10 +1,10 @@
-<table class="table lessons-list card card-strong">
+<table class="table  lessons-list card card-strong">
   <tbody>
     <tr *ngFor="let lesson of lessons">
-      <td class="lesson-title" ng-bind="lesson.description"></td>
+      <td class="lesson-title"> {{lesson.description}}</td>
       <td class="duration">
         <i class="md-icon duration-icon">access_time</i>
-        <span ng-bind="lesson.creditHours"></span>
+        <span>{{lesson.creditHours}}</span>
       </td>
     </tr>
   </tbody>
